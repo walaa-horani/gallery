@@ -1,0 +1,27 @@
+     
+     {%extends 'base.html' %}
+     {%load static%}
+     {%block title%} register{%endblock%}
+     {%block content%}
+     <div class="log-imag" style="background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('{%static "img/photo.jpg"%}');">
+        <div class="container ">
+            <div class="row ">
+             
+    
+               
+                <div class="col-md-6 m-auto">
+                    <form class="log-form" action="" method="POST" novalidate>
+                        {%csrf_token%}
+                        {%include 'form.html' %}
+                        <button class="add_photo-btn add_photo-btn2 mt-5" type="submit">register</button>
+                     </form>
+                </div>
+             
+    
+         
+        </div>
+        </div>
+     </div>
+   
+     {%endblock%}
+  

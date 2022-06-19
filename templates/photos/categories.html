@@ -1,0 +1,30 @@
+{%extends 'base.html' %}
+
+
+
+{%block content%}
+{%if category_post%}
+<div class="container">
+
+<div class="row mt-5 ">
+    {%for post in category_post%}
+    <div class="col-md-4">
+        <div class="card p-3">
+            <a href="{%url 'photo' post.slug %}">
+            <img src="{{post.image.url}}" alt="" class="img-fluid">
+            <small class="text-muted">Category: {{post.category.name}}</small>
+        </a>
+        </div>
+    </div>
+      
+    {%endfor%}
+    {%else%}
+    <h3 class="text-center mt-5">the category of this gallery is empty... start <a class="text-danger" href="{%url 'add_photo' %}">adding photos</a></h3>
+
+</div>
+
+   
+{%endif%}
+</div>
+
+{%endblock%}

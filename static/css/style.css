@@ -1,0 +1,54 @@
+.gallery-head{
+    margin-top: 150px;
+}
+body{
+    text-transform: capitalize
+}
+.btn-view{
+    display: block;
+    background-color: black;
+    transition: 0.4s;
+    width: 100%;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    color: white !important;
+    font-size: 16px;
+   
+}
+
+.btn-view:hover{
+    background-color: #8B0000;
+}
+.btn-back{
+    
+    background-color: black;
+    transition: 0.4s;
+    width: 100%;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    color: white !important;
+    font-size: 16px;
+   
+}
+.photo-details img{
+    max-width: 600px;
+}
+.add_photo-btn{
+    display: block;
+    background-color: #8B0000;
+    transition: 0.4s;
+    width: 100%;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    color: white !important;
+    font-size: 16px;
+}
+.add_photo-btn:hover{
+    background-color: black;
+}
+.list-group-flush>.list-group-item:last-child{
+    padding: 0 !important;
+}

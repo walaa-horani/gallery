@@ -1,0 +1,42 @@
+{%extends 'base.html' %}
+
+{%block title%}search {%endblock%}
+
+{%block content%}
+<div class="container">
+
+{%if searched%}
+
+
+  <h3 class="text-center mt-5 mb-5"> your searched for {{searched}}</h3> 
+<div class="row">
+    {%for photo in photos %}
+    <div class="col-md-4">
+      
+        <div class="card my-2" >
+                        
+            <img src="{{photo.image.url}}" class="card-img-top img-fluid" alt="...">
+            
+            <div class="card-body">
+                
+              <small class="text-muted">Category: {{photo.category.name}}</small>
+            
+            </div>
+            <a href="{%url 'photo' photo.slug %}" class="btn-view">view</a>
+        
+          </div>
+    </div>
+    {%endfor%}
+</div>
+
+{%else%}
+
+<h3 class="text-center mt-5">you didn't search for any photo</h3>
+<div class="text-center mt-4">
+    <a class="btn-back" href="{%url 'gallery' %}">back to gallery</a>
+
+</div>
+
+{%endif%}
+</div>
+{%endblock%}

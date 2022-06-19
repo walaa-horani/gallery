@@ -1,0 +1,30 @@
+{%extends 'base.html' %}
+
+
+
+{%block content%}
+<div class="main-con" style="background-image:linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),  url('../static/img/photo.jpg')">
+
+
+<div class="add_con" >
+
+<div class="container">
+    <div class="row align-items-center justify-content-center">
+        <div class="col-md-4">
+
+            <form action="" method="POST">
+                {%csrf_token%}
+                <div class="card p-4">
+                    <div class="form">
+                        {{form}}
+                    </div>
+                    <button class="add_photo-btn btn-cat " type="submit">add</button>
+
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+{%endblock%}
